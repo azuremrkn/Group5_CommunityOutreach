@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Serving Smiles | Contact Us</title>
+    <style>    
+    /*navbar css*/
+            body {
+                margin: 0;
+                background-color: #000000;
+                font-family: Arial, sans-serif;
+            }
+            nav {
+                width: 100%;
+                position: fixed;
+                top: 0;
+                background-color: #ffffff;
+                z-index: 1000;
+                gap: 20px;
+            }
+            div {
+                display: flex;
+                align-items: center; 
+                gap: 20px;
+            }
+            nav {
+                padding: 10px 20px;
+                display: flex;
+            }
+            .navbar ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+            .navbar li {
+                position: relative;
+            }
+            .navbar a {
+                text-decoration: none;
+                color: #000000;
+                font-family: "Tahoma";
+                font-size: 18px;
+                padding: 10px 15px;
+                display: block;
+                text-align: center;
+                transition: 0.3s ease-in;
+                border-radius: 5px;
+            }
+            .navbar #current {
+                background-color: #e2e2e2;
+            }
+            .navbar a:hover {
+                background-color: #bdbdbd;
+            }
+            .navbar #current:hover {
+                background-color: #a8a8a8;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #ffffff;
+                min-width: 150px;
+                border-radius: 5px;
+                text-align: center;
+                padding: 5px 0;
+                z-index: 1001;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .dropdown-content a {
+                padding: 10px;
+                display: block;
+                text-align: center;
+                color: #000000;
+                transition: 0.3s ease-in;
+            }
+            footer {
+                padding: 10px 0;
+                width: 100%;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                font-family: "Arial";
+                color: #ffffff;
+                text-align: center;
+                background-color: #000000;
+                z-index: 1000;
+            }
+            #logo {
+                width: 100px;
+                height: auto;
+            }
+            .navbar p {
+                margin: 0;
+                font-family: "Agency FB";
+                font-size: 35px;
+                font-weight: bold;
+                color: #000000;
+            }
+            main {
+                margin-top: 150px;
+                padding-bottom: 60px;
+                color: #ffffff;
+                text-align: center;
+            }
+        /*navbar css*/
+
+        /*div css*/
+            .bg {
+                background-size: cover;
+                background-position: center;
+                animation-name: bg;
+                animation-duration: 3s;
+                animation-iteration-count: 1;
+                animation-fill-mode: backwards;
+                opacity: 0.7;
+                width: 100%;
+                height: 100vh;
+                position: absolute;
+                border: 0;
+            }
+            #bg1 {
+                background-image: url(pictures/IMG_2176.jpg);
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+            #bg2 {
+                background-image: url(pictures/IMG_2896.jpg);
+                top: 100%;
+                left: 0;
+                z-index: -1;
+
+                animation-delay: 0.2s;
+            }
+            @keyframes bg {
+                from {transform: translate(-1000px, 0); opacity: 0;}
+                to {transform: translate(0, 0);}
+            }
+            main div {
+                max-width: 1000px;
+                margin: 20px auto;
+                padding: 30px;
+                color: #000000;
+                text-align: center;
+                background: linear-gradient(to bottom right, #ffb87e, #ff7b00);
+                border: 5px solid #794909;
+                border-radius: 30px;
+            }
+            /*div css*/
+            #invisible {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                border: 0;
+                background: none;
+                padding: 0;
+                margin: 0 auto;
+            }
+            #contact {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            h1, h2, h3 {
+                font-family: "Bahnschrift";
+                margin: 0;
+            }
+            input, textarea {
+                padding: 6px;
+                border: 2px solid #794909;
+                border-radius: 6px;
+                text-align: center;
+            }
+            #contact, #other {
+                background: linear-gradient(to bottom right, #ffb87e, #ff7b00);
+                display: flex;
+                padding: 15px;
+                animation-duration: 3s;
+                animation-iteration-count: 1;
+                animation-fill-mode: backwards;
+            }
+            #contact {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 80%;
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                border-radius: 20px;
+
+                animation-name: contact;
+            }
+            #form {
+                margin-top: 0; 
+                width: 600px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #other {
+                flex-direction: column;
+                gap: 10px;
+                margin: 10px auto;
+
+                animation-name: other;
+                animation-delay: 1s;
+            }
+            @keyframes contact {
+                from {transform: scale(0.0, 0.0); background-color: #00000000}
+                to {transform: scale(1.0, 1.0);}
+            }
+            @keyframes other {
+                from {transform: scale(0.0, 0.0); background-color: #00000000}
+                to {transform: scale(1.0, 1.0);}
+            }
+            #message {
+                height: 100px;
+                width: 200px;
+            }
+            .contact-details {
+                margin: 0 auto;
+            }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div>
+            <img id="logo" src="logo.png" alt="Logo">
+            <p>Serving Smiles</p>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="programs.html">Our Program</a>
+                <div class="dropdown-content">
+                    <a href="gallery.html">View Gallery</a>
+                </div>
+            </li>
+            <li><a id="current" href="contact.html">Contact</a></li>
+            <li><a href="donation.html">Get Involved</a></li>
+        </ul>
+    </nav>
+
+    <div class="bg" id="bg1">
+        <div class="bg" id="bg2">
+        </div>
+    </div>
+
+    <main>
+        <div id="contact">
+            <h1>CONTACT US!</h1>
+            <div id="form">
+            <h2>Directly Get In Touch</h2>
+                <form action="/action_page.php">
+                    <label for="fname">Name:</label><br>
+                    <input type="text" id="fname" name="fname" value=""><br><br>
+                    <label for="lname">Email:</label><br>
+                    <input type="text" id="lname" name="lname" value=""><br><br>
+                    <label for="donation">Message:</label><br>
+                    <textarea type="text" id="message" name="message" placeholder="Write something.." value=""></textarea><br><br>
+                    <input type="submit" id="submit" value="Submit"> <br>
+                    <p>We'd love to hear from you!</p>
+                </form>
+            </div>
+        </div>
+        
+        <div id="other">
+            <h2>OTHER WAYS TO CONTACT</h2>
+            <div id="invisible">
+                <div class="contact-details">
+                    <h3>Through Email</h3>
+                    <p>Contact any of the following email addresses&#58;</p>
+                    <ul>
+                        <li>maj.driza&#x40;maristschool.edu.ph</li>
+                        <li>gdcura&#x40;maristschool.edu.ph</li>
+                        <li>kvnepomuceno&#x40;maristschool.edu.ph</li>
+                        <li>chrisj.ocampo&#x40;maristschool.edu.ph</li>
+                        <li>np.padua&#x40;maristschool.edu.ph</li>
+                    </ul>
+                </div>
+
+                <div class="contact-details">
+                    <h3>Through Phone Number</h3>
+                    <p>Contact any of the following phone numbers&#58;</p>
+                    <ul>
+                        <li>+63 919 111 1111</li>
+                        <li>+63 910 404 2763</li>
+                        <li>+63 280 446 1537</li>
+                        <li>+63 932 555 3304</li>
+                        <li>+63 928 555 9198</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Last Updated: February 21, 2025 | 9 - St. Matthew
+    </footer>
+</body>
+</html>

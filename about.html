@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serving Smiles | About Us</title>
+    <style>
+        /*navbar css*/
+            body {
+                margin: 0;
+                background-color: #000000;
+                font-family: Arial, sans-serif;
+            }
+            nav {
+                width: 100%;
+                position: fixed;
+                top: 0;
+                background-color: #ffffff;
+                z-index: 1000;
+                gap: 20px;
+            }
+            div {
+                display: flex;
+                align-items: center; 
+                gap: 20px;
+            }
+            nav {
+                padding: 10px 20px;
+                display: flex;
+            }
+            .navbar ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+            .navbar li {
+                position: relative;
+            }
+            .navbar a {
+                text-decoration: none;
+                color: #000000;
+                font-family: "Tahoma";
+                font-size: 18px;
+                padding: 10px 15px;
+                display: block;
+                text-align: center;
+                transition: 0.3s ease-in;
+                border-radius: 5px;
+            }
+            .navbar #current {
+                background-color: #e2e2e2;
+            }
+            .navbar a:hover {
+                background-color: #bdbdbd;
+            }
+            .navbar #current:hover {
+                background-color: #a8a8a8;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #ffffff;
+                min-width: 150px;
+                border-radius: 5px;
+                text-align: center;
+                padding: 5px 0;
+                z-index: 1001;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .dropdown-content a {
+                padding: 10px;
+                display: block;
+                text-align: center;
+                color: #000000;
+                transition: 0.3s ease-in;
+            }
+            footer {
+                padding: 10px 0;
+                width: 100%;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                font-family: "Arial";
+                color: #ffffff;
+                text-align: center;
+                background-color: #000000;
+                z-index: 1000;
+            }
+            #logo {
+                width: 100px;
+                height: auto;
+            }
+            .navbar p {
+                margin: 0;
+                font-family: "Agency FB";
+                font-size: 35px;
+                font-weight: bold;
+                color: #000000;
+            }
+            main {
+                margin-top: 150px;
+                padding-bottom: 60px;
+                color: #ffffff;
+                text-align: center;
+            }
+        /*navbar css*/
+
+        /*div css*/
+            #bg1 {
+                background-size: cover;
+                background-position: center;
+                animation-name: bg;
+                animation-duration: 3s;
+                animation-iteration-count: 1;
+                animation-fill-mode: backwards;
+                opacity: 70%;
+                width: 100%;
+                height: 100vh;
+                position: absolute;
+                border: 0;
+
+                background-image: url(pictures/group5.jpg);
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+            @keyframes bg {
+                from {transform: scale(0, 0); opacity: 0;}
+                to {transform: scale(1, 1);}
+            }
+            main div {
+                margin: 20px auto;
+                padding: 30px;
+                color: #000000;
+                text-align: center;
+                background: linear-gradient(to bottom right, #ffb87e, #ff7b00);
+                border: 5px solid #794909;
+                border-radius: 30px;
+            }
+            /*div css*/
+            main {
+                margin-top: 600px;
+            }
+            main section {
+                width: 1200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 50px;
+                margin: 0 auto;
+            }
+            .left-section, .right-section {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                align-self: flex-start;
+            }
+            .left-section {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-self: center;
+                max-width: 700px;
+
+                animation-name: left;
+                animation-duration: 3s;
+                animation-iteration-count: 1;
+                animation-fill-mode: backwards;
+            }
+            .right-section {
+                animation-name: right;
+                animation-duration: 3s;
+                animation-iteration-count: 1;
+                animation-fill-mode: backwards;
+            }
+            .left-section p, .right-section p {
+                margin: 0 auto;
+            }
+            .left-section h1, .right-section h1, .right-section h2 {
+                margin: 0;
+            }
+            @keyframes left {
+                from {transform: translate(-1000px, 0); opacity: 0;}
+                to {transform: translate(0, 0);}
+            }
+            @keyframes right {
+                from {transform: translate(1000px, 0); opacity: 0;}
+                to {transform: translate(0, 0);}
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div>
+                <img id="logo" src="logo.png" alt="Logo">
+                <p>Serving Smiles</p>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a id="current" href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="programs.html">Our Program</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">View Gallery</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donation.html">Get Involved</a></li>
+            </ul>
+        </nav>
+    </header>
+        
+    <div id="bg1"></div>
+
+    <main>
+        <section>
+            <div class="left-section">
+                <h1>Our Team</h1>
+                <p>We are a well-organized team that prioritizes cooperation and strategic planning in order to accomplish our objectives. 
+                    To make sure that every action we take is significant and effective, we concentrate on pooling our talents and ideas. 
+                    We strive to complete our projects with great teamwork and commitment, particularly in programs like this community outreach.</p>
+            </div>
+
+            <div class="right-section">
+                    <h1>GROUP 5 of ST. MATTHEW</h1>
+                    <p><em>Leader</em> - Kurt Isaac V. Nepomuceno</p>
+                    <p><em>Asst. Leader</em> - Guilan Renfred D.C. Cura</p>
+                    <h2>Members</h2>
+                    <p>Christopher Jan E. Ocampo</p>
+                    <p>Noel Patrick D. Padua</p>
+                    <p>Ma. Johana Mckylah M. Driza</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Last Updated: February 21, 2025 | 9 - St. Matthew
+    </footer>
+</body>
+</html>
